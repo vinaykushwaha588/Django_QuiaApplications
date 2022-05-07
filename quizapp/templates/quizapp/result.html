@@ -1,0 +1,90 @@
+{% extends "quizapp\base.html" %}
+<body>
+{% block body %}
+<div class="mask d-flex align-items-center h-100 gradient-custom-3 col-sm-8"
+     style="margin-left:400px;margin-top:5px;border-radius:15px">
+    <div class="cotainer">
+        <div class="col-lg-8" style="border:1px solid ; border-radius: 10px; background-color: white;">
+            <h1 class="text-center text-primary"><b>Quiz Result</h1><hr>
+
+                <table style="border:4px;text-align:center; margin-bottom:10px;">
+                    <tr>
+                        <th>
+                            <h3>Username :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.user}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>Email :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{request.user.email}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>Quize Name :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.quize_type}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>Total Que. :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.total_que}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>Attempt Que. :</h3>
+                        </th>
+                        <th>
+                            <h3><b> {{performance.attempt_que}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>True :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.true_que}}</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h3>Wrong :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.wrong_que}}</h3>
+                        </th>
+                    </tr>
+            
+                    <tr>
+                        <th>
+                            <h3>Points :</h3>
+                        </th>
+                        <th>
+                            <h3><b>{{performance.points}}/{{out_of}}</h3>
+                        </th>
+                    </tr>
+            
+                    <tr>
+                        <th>
+                            <h3>Date :</h3>
+                        </th>
+                        <th>
+                            <h3><b class='mb-5'>{{performance.date}}</h3>
+                        </th>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

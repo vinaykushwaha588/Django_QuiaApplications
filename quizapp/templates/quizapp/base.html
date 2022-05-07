@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}QuizApp{% endblock %}</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body style="background:#1111">
+  <!-- MENU -->
+  <section class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+
+         <div class="navbar-header">
+              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+              </button>
+
+  <!-- lOGO TEXT HERE -->
+        <a href="/quizapp" class="navbar-brand"><i class="fa fa-h-square"></i>QuizApplication</a>
+         </div>
+
+         <!-- MENU LINKS -->
+         <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                   <li><a href="/quizapp" class="smoothScroll">Courses</a></li>
+                   <li><a href="#" class="smoothScroll">AddQuestions</a></li>
+                   <li><a href="/logout" class="smoothScroll">Logout</a></li>
+  
+              </ul>
+         </div>
+
+    </div>
+</section>
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

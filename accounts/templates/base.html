@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}QuizApp{% endblock %}</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body style="background:#1111">
+  <!-- MENU -->
+  <section class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+
+         <div class="navbar-header">
+              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+              </button>
+
+  <!-- lOGO TEXT HERE -->
+        <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>QuizApplication</a>
+         </div>
+
+         <!-- MENU LINKS -->
+         <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                   <li><a href="/login" class="smoothScroll">Login</a></li>
+                   <li><a href="/" class="smoothScroll">SignUp</a></li>
+                  
+              </ul>
+         </div>
+    </div>
+</section>
+{% if messages %}
+<div class="alert alert-success" role="alert" style="padding:5px">
+    {% for i in messages %}
+    <div class="alert-link">{{i}}</div>
+    {% endfor %}
+</div>
+{% endif %}
+{% block body %}  {% endblock %}
+</body>
+</html>

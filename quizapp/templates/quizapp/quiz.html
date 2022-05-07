@@ -1,0 +1,42 @@
+{% extends "quizapp\base.html" %}
+{% block body %}
+
+<div class='container' style="border: 1px; solid; border-radius: 10px; background-color: white;">
+    
+        <h2 class="my-4" >Category : <span class="text-danger">{{quize_category.title}}</span></h2><br>    
+        <div class="border-rounded">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for i in que_data %}
+            <div class="card-header text-primary"  ><h4>{{i.question}}</h4></div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td><input id="option1" name="{{i.id}}" type="radio" value="{{i.option1}}"/> </td>
+                        <th><label for="option1">{{i.option1}}</label> </th>
+                    </tr>
+                    <tr>
+                        <td><input id="option2" name="{{i.id}}" type="radio" value="{{i.option2}}"/> </td>
+                        <th><label for="option2">{{i.option2}}</label> </th>
+                    </tr>
+                    <tr>
+                        <td><input id="option3" name="{{i.id}}" type="radio" value="{{i.option3}}"/> </td>
+                        <th><label for="option3">{{i.option3}}</label> </th>
+                    </tr>
+                    <tr>
+                        <td><input id="option4" name="{{i.id}}" type="radio" value="{{i.option4}}"/> </td>
+                    <th><label for="option4">{{i.option4}}</label> </th>
+                </tr>
+            </table>
+        </div>
+         {% endfor %}
+        <div class="card-footer">
+            <input type="submit" value="submit" class="btn btn-primary">
+           
+        </div>
+       
+        </form>
+        </div>
+</div>
+{% endblock %}
